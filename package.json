@@ -1,0 +1,28 @@
+{
+  "name": "atseashop-tests",
+  "version": "1.0.0",
+  "description": "Final project SAP-Perficient",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ana-os-mo/atSeaShop-tests.git"
+  },
+  "keywords": [
+    "testing",
+    "automation"
+  ],
+  "author": "Ana Osorio, Salome Aristizabal <anmosoriomo@unal.edu.co, saaristizabalgi@unal.edu.co> (ana-os-mo, salitomeyo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ana-os-mo/atSeaShop-tests/issues"
+  },
+  "homepage": "https://github.com/ana-os-mo/atSeaShop-tests#readme",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}
