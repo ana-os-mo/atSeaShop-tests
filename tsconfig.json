@@ -8,5 +8,5 @@
       "noUnusedParameters": true,
       "noUnusedLocals": true,
       "baseUrl": "."
-    }
+    },
   }
