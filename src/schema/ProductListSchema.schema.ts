@@ -30,7 +30,7 @@ const productSchema = {
 }
 
 const productListSchema = {
-  title: 'Product list',
+  title: 'Products list',
   description: 'List of products from atsea shop',
   type: 'array',
   items: [{ ...productSchema }]

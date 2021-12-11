@@ -5,7 +5,7 @@ import * as chaiJSchema from 'chai-json-schema';
 
 chai.use(chaiJSchema);
 const { expect } = chai;
-const { customerSchema } = require('../../src/schema/CustomerSchema.schema')
+const { customerSchema, customerUpdatedSchema } = require('../../src/schema/CustomerSchema.schema')
 const { customer, updatedCustomer } = require('../../src/testObjects/toyCustomer')
 
 const baseUrl = 'http://localhost:8080/api';
@@ -115,7 +115,7 @@ describe("Customer API requests", function() {
         .send(updatedCustomer);
 
       expect(response.status).to.equal(StatusCodes.OK);
-      expect(resCustomer.body).to.be.jsonSchema(customerSchema);
+      expect(response.body).to.be.jsonSchema(customerUpdatedSchema);
       expect(response.body.address).to.equal(updatedCustomer.address);
       expect(response.body.phone).to.equal(updatedCustomer.phone);
       expect(response.body.password).to.equal(updatedCustomer.password);
