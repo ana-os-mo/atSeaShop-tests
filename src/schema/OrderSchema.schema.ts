@@ -2,11 +2,11 @@ const orderSchema = {
   title: 'Order',
   description: 'An order made by a customer',
   type: 'object',
-  required: ['orderId', 'orderDate', 'customerId', 'productsOrdered'],
+  required: ['orderId', 'customerId', 'productsOrdered'],
   properties: {
     orderId: {
       description: 'The unique identifier for an order',
-      type: 'number'
+      type: 'integer'
     },
     orderDate: {
       description: 'Date when order was placed or updated',
