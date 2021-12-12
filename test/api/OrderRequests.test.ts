@@ -41,7 +41,7 @@ describe("Order API requests", function() {
           .send(toyOrder);
       } catch (error) {
         expect(error.response.status).to.equal(StatusCodes.CONFLICT)
-        expect(error.response.body.errorMessage).to.equal(`Unable to create. An order with id ${orderId} already exists`);
+        expect(error.response.body.errorMessage).to.equal(`Unable to create. An order with id ${orderId} already exists.`);
       };
     });
   });

@@ -8,5 +8,9 @@
       "noUnusedParameters": true,
       "noUnusedLocals": true,
       "baseUrl": ".",
+      "paths": {
+        "src/*": ["./src/*"],
+        "test/*": ["./test/*"]
+      },
     },
   }
