@@ -16,5 +16,17 @@ const customerForOrder = {
   "role": "USER"
 };
 
+const credentialsForOrder = {
+  username: 'elverGT',
+  password: 'guessWho'
+}
+
+const invalidCredentials = {
+  username: "elverGT",
+  password: "gAtItO"
+}
+
 exports.toyOrder = toyOrder;
 exports.customerForOrder = customerForOrder;
+exports.credentialsForOrder = credentialsForOrder;
+exports.invalidCredentials = invalidCredentials;
