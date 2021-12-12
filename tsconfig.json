@@ -7,6 +7,6 @@
       "moduleResolution": "node",
       "noUnusedParameters": true,
       "noUnusedLocals": true,
-      "baseUrl": "."
+      "baseUrl": ".",
     },
   }
