@@ -3,7 +3,7 @@ import { browser, Config } from 'protractor';
 const firefoxConfig = {
   browserName: 'firefox',
   firefoxOptions: {
-    args: ['-headless']
+    args: ['-headless', '-window-size=1920,1080']
   },
   name: 'firefox-tests',
   shardTestFiles: true,
