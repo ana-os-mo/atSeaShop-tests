@@ -7,7 +7,7 @@ const { customerForOrder, credentialsForOrder, invalidCredentials } = require('.
 
 const baseUrl = 'http://localhost:8080';
 
-describe.only('API login an purchase', function() {
+describe('API login an purchase', function() {
   let custId;
   describe("Loging in", function() {
     it('A customer should be created', async function() {

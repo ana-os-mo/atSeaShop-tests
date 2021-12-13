@@ -108,12 +108,6 @@ describe('when a user tries to Login', function() {
     expect(response.status).to.equal(StatusCodes.CREATED);
     expect(response.body).to.have.property("customerId");
   });
-  before(async function() {
-    await browser.get('http://host.docker.internal:8080');
-  });
-  after(async function() {
-    // borrar usuario
-  });
 
   it('fill signin form', async function() {
     browser.sleep(3000);
@@ -123,7 +117,7 @@ describe('when a user tries to Login', function() {
   })
 })
 
-describe('Add items', function() {
+describe.skip('Add items', function() {
   const addItemPage = new AddItemPage();
   before(async function() {
     await browser.get('http://host.docker.internal:8080');
@@ -136,5 +130,16 @@ describe('Add items', function() {
     browser.sleep(3000);
     await addItemPage.addItems();
     await addItemPage.proceedToCheckout();
-  })
-})
+  });
+});
+
+describe('Delete customers', function() {
+  let response;
+  before(async function() {
+    response = await del(`${baseUrl}/api/customer/`)
+      .set('User-Agent', 'agent')
+  });
+  it('Then the customers should be successfully deleted ', function() {
+    expect(response.status).to.equal(StatusCodes.NO_CONTENT);
+  });
+});
