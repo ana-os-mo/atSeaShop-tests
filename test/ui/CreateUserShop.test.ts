@@ -6,6 +6,8 @@ import { StatusCodes } from 'http-status-codes';
 
 import { SignUpPage } from "src/page/signup.page";
 import { AddItemPage } from "src/page/addItem.page";
+import { CheckoutPage } from "src/page/checkout.page";
+import { LogoutPage } from "src/page/logout.page";
 
 const baseUrl = 'http://localhost:8080';
 
@@ -30,10 +32,10 @@ describe('when a you create a user', function() {
   const signUpPage = new SignUpPage();
 
   it('then a user should be created', async function() {
-    browser.sleep(3000);
+    browser.sleep(250000);
     await signUpPage.NavButtonSignUp();
     await signUpPage.FillSignUp();
-    browser.sleep(3000);
+    browser.sleep(250000);
     await signUpPage.SignUp();
   })
 })
@@ -49,8 +51,28 @@ describe('when a user tries to add items', function() {
 
   it('then items should be added', async function() {
     await addItemPage.addItems();
-    browser.sleep(3000);
+    browser.sleep(250000);
     await addItemPage.proceedToCheckout();
   });
 });
 
+describe('when a user fills the checkout information', function() {
+  const checkoutPage = new CheckoutPage();
+
+  it('then an order should be placed', async function() {
+    browser.sleep(250000);
+    await checkoutPage.FillCreditInfo();
+    await checkoutPage.FillBillingInfo();
+    await checkoutPage.CompleteOrder();
+    await checkoutPage.ContinueShopping();
+  });
+});
+
+describe('when an user tries to logout', function() {
+  const logoutPage = new LogoutPage();
+
+  it('then the user session should be closed', async function() {
+    browser.sleep(250000);
+    logoutPage.LogOut();
+  })
+})
