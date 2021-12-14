@@ -30,6 +30,8 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
     - run: npm ci
+    - name: Bring public ID
+      run: export PUBLIC_DNS=$(aws ec2 describe-instances --filters Name=tag:responsible,Values=anmosoriomo --query "Reservations[*].Instances[*].PublicDnsName" --output text --region us-east-2)
     - name: Running API tests
       run: npm run test:api
     - name: Upload reports to AWS bucket
@@ -60,6 +62,8 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
     - run: npm ci
+    - name: Bring public ID
+      run: export PUBLIC_DNS=$(aws ec2 describe-instances --filters Name=tag:responsible,Values=anmosoriomo --query "Reservations[*].Instances[*].PublicDnsName" --output text --region us-east-2)
     - name: Starting Selenium grid
       run: docker-compose up -d
     - name: Running UI tests
