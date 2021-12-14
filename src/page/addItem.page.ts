@@ -7,7 +7,7 @@ export class AddItemPage {
   private checkoutButton: ElementFinder;
 
   constructor() {
-    this.item1 = $('..productListWrapper > div:nth-child(1) > .tile > .titleBottom > .tileAdd > button');
+    this.item1 = $('.productListWrapper > div:nth-child(1) > .tile > .titleBottom > .tileAdd > button');
     this.item2 = $('.productListWrapper > div:nth-child(6) > .tile > .titleBottom > .tileAdd > button');
     this.item3 = $('.productListWrapper > div:nth-child(7) > .tile > .titleBottom > .tileAdd > button');
     this.checkoutButton = $('.checkout-button > a')    
