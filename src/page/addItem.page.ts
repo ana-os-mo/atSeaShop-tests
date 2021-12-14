@@ -7,10 +7,10 @@ export class AddItemPage {
   private checkoutButton: ElementFinder;
 
   constructor() {
-    this.item1 = $('#root > div > div:nth-child(5) > div > div:nth-child(1) > div > div.titleBottom > div.tileAdd > button');
-    this.item2 = $('#root > div > div:nth-child(5) > div > div:nth-child(6) > div > div.titleBottom > div.tileAdd > button');
-    this.item3 = $('#root > div > div:nth-child(5) > div > div:nth-child(7) > div > div.titleBottom > div.tileAdd > button');
-    this.checkoutButton = $('#root > div > div:nth-child(4) > div > div.checkout-button > a')    
+    this.item1 = $('.titleBottom > .tileAdd > button:nth-child(1)');
+    this.item2 = $('.titleBottom > .tileAdd > button:nth-child(6)');
+    this.item3 = $('.titleBottom > div.tileAdd > button:nth-child(7)');
+    this.checkoutButton = $('.checkout-button > a')    
 }
 
   public async addItems(): Promise<void> {
