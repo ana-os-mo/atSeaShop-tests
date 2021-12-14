@@ -2,11 +2,12 @@ import { get, Response } from 'superagent';
 import * as chai from 'chai';
 import * as chaiJSchema from 'chai-json-schema';
 const { productListSchema, productSchema } = require('../../src/schema/ProductListSchema.schema')
+const { url } = require('../../src/testObjects/env')
 
 chai.use(chaiJSchema);
 const { expect } = chai;
 
-const baseUrl = 'http://localhost:8080/api';
+const baseUrl = url.base_url_api;
 
 describe('Scheme validations', function() {
   let resProductList: Response;

@@ -7,8 +7,9 @@ chai.use(chaiJSchema);
 const { expect } = chai;
 const { customerSchema, customerUpdatedSchema } = require('../../src/schema/CustomerSchema.schema')
 const { customer, updatedCustomer } = require('../../src/testObjects/toyCustomer')
+const { url } = require('../../src/testObjects/env')
 
-const baseUrl = 'http://localhost:8080/api';
+const baseUrl = url.base_url_api;
 
 describe("Customer API requests", function() {
   let custName = customer.name;

@@ -30,10 +30,10 @@ export class CheckoutPage {
   }
 
   public async FillCreditInfo(): Promise<void> {
-    await this.firstName.sendKeys('Elver');
-    await this.lastName.sendKeys('Gomez');
-    await this.cardNumber.sendKeys('323');
-    await this.ccv.sendKeys('4238');
+    await this.firstName.sendKeys('e');
+    await this.lastName.sendKeys('g');
+    await this.cardNumber.sendKeys('1');
+    await this.ccv.sendKeys('2');
     await this.mmyy.sendKeys('1212');
   }
 
