@@ -38,10 +38,10 @@ export class CheckoutPage {
   }
 
   public async FillBillingInfo(): Promise<void> {
-    await this.company.sendKeys('E');
-    await this.title.sendKeys('c');
-    await this.address.sendKeys('c');
-    await this.city.sendKeys('n');
+    await this.company.sendKeys('Elver SAS');
+    await this.title.sendKeys('CEO');
+    await this.address.sendKeys('cr 2389 h 382');
+    await this.city.sendKeys('Narnia');
   }
 
   public async CompleteOrder(): Promise<void> {
