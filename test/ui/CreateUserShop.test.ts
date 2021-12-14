@@ -8,12 +8,13 @@ import { SignUpPage } from "src/page/signup.page";
 import { AddItemPage } from "src/page/addItem.page";
 import { CheckoutPage } from "src/page/checkout.page";
 import { LogoutPage } from "src/page/logout.page";
+const { url } = require('../../src/testObjects/env')
 
-const baseUrl = 'http://localhost:8080';
+const baseUrl = url.base_url;
 
 describe('Load web page', function() {
   describe('It should load the web page', async function() {
-    await browser.get('http://host.docker.internal:8080');
+    await browser.get(url.base_ui_url);
   })
 })
 
@@ -43,7 +44,7 @@ describe('when a you create a user', function() {
 describe('when a user tries to add items', function() {
   const addItemPage = new AddItemPage();
   before(async function() {
-    await browser.get('http://host.docker.internal:8080');
+    await browser.get(url.base_ui_url);
   });
   after(async function() {
     // borrar usuario
