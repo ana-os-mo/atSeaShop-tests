@@ -8,8 +8,8 @@ export class AddItemPage {
 
   constructor() {
     this.item1 = $('.tileAdd > button:nth-child(1)');
-    this.item2 = $('.tileAdd > button:nth-child(6)');
-    this.item3 = $('.tileAdd > button:nth-child(7)');
+    this.item2 = $('.tileAdd > button:nth-child(1)');
+    this.item3 = $('.tileAdd > button:nth-child(1)');
     this.checkoutButton = $('.checkout-button > a')    
 }
 
