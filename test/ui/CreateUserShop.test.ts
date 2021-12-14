@@ -41,7 +41,7 @@ describe('when a you create a user', function() {
   })
 })
 
-describe('when a user tries to add items', function() {
+describe.skip('when a user tries to add items', function() {
   const addItemPage = new AddItemPage();
   before(async function() {
     await browser.get(url.base_ui_url);
