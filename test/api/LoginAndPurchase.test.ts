@@ -4,8 +4,9 @@ import * as chai from 'chai';
 
 const { expect } = chai;
 const { customerForOrder, credentialsForOrder, invalidCredentials } = require('../../src/testObjects/toyOrders')
+const { url } = require('../../src/testObjects/env')
 
-const baseUrl = 'http://localhost:8080';
+const baseUrl = url.base_url;
 
 describe('API login an purchase', function() {
   let custId;

@@ -21,8 +21,8 @@ export class SignUpPage {
   }
 
   public async FillSignUp(): Promise<void> {
-    await this.userName.sendKeys(customerForOrder.username);
-    await this.password.sendKeys(customerForOrder.password);
+    await this.userName.sendKeys('a');
+    await this.password.sendKeys('a');
   }
 
   public async SignUp(): Promise<void> {

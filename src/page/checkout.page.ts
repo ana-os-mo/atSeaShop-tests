@@ -30,18 +30,18 @@ export class CheckoutPage {
   }
 
   public async FillCreditInfo(): Promise<void> {
-    await this.firstName.sendKeys('Elver');
-    await this.lastName.sendKeys('Gomez');
-    await this.cardNumber.sendKeys('323');
-    await this.ccv.sendKeys('4238');
+    await this.firstName.sendKeys('e');
+    await this.lastName.sendKeys('g');
+    await this.cardNumber.sendKeys('1');
+    await this.ccv.sendKeys('2');
     await this.mmyy.sendKeys('1212');
   }
 
   public async FillBillingInfo(): Promise<void> {
-    await this.company.sendKeys('Elver SAS');
-    await this.title.sendKeys('CEO');
-    await this.address.sendKeys('cr 2389 h 382');
-    await this.city.sendKeys('Narnia');
+    await this.company.sendKeys('E');
+    await this.title.sendKeys('c');
+    await this.address.sendKeys('c');
+    await this.city.sendKeys('n');
   }
 
   public async CompleteOrder(): Promise<void> {

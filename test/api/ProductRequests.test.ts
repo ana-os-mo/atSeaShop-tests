@@ -6,8 +6,9 @@ import * as chaiJSchema from 'chai-json-schema';
 chai.use(chaiJSchema);
 const { expect } = chai;
 const { productSchema, productListSchema } = require('../../src/schema/ProductListSchema.schema')
+const { url } = require('../../src/testObjects/env')
 
-const baseUrl = 'http://localhost:8080/api';
+const baseUrl = url.base_url_api;
 
 describe('Product API requests', function() {
   describe('Getting all products', function() {

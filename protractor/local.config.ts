@@ -29,7 +29,7 @@ export const config: Config = {
   seleniumAddress: 'http://0.0.0.0:4444',
   SELENIUM_PROMISE_MANAGER : false,
   mochaOpts: {
-    timeout: 18000,
+    timeout: 180000,
     reporter: 'mochawesome-screenshots',
   },
   getPageTimeout: 30000,
