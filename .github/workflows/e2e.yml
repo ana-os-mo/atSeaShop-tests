@@ -1,6 +1,7 @@
 on:
-  schedule:
-  - cron : 0 0 * * *
+  # This trigger activates the flow every day at midnight
+  # schedule:
+  # - cron : 0 0 * * *
   repository_dispatch:
     types: [deployed]
   workflow_dispatch:
